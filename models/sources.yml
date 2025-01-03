@@ -4,24 +4,24 @@ version: 2
 sources:
   - name: fbref_historic
     tables: 
-      - name: 2016
-      - name: 2017
-      - name: 2018
-      - name: 2019
-      - name: 2020
-      - name: 2021
-      - name: 2022
-      - name: 2023
+      - name: '2016'
+      - name: '2017'
+      - name: '2018'
+      - name: '2019'
+      - name: '2020'
+      - name: '2021'
+      - name: '2022'
+      - name: '2023'
   
   - name: fpl_historic
     tables: 
-      - name: 2017
-      - name: 2018
-      - name: 2019
-      - name: 2020
-      - name: 2021
-      - name: 2022
-      - name: 2023
+      - name: '2017'
+      - name: '2018'
+      - name: '2019'
+      - name: '2020'
+      - name: '2021'
+      - name: '2022'
+      - name: '2023'
   - name: live
     tables:
       - name: prices
