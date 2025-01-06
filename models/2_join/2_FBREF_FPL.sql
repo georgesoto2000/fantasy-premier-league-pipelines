@@ -14,7 +14,7 @@ SELECT
     RED_CARDS,
     xG,
     xA,
-    OWN_GOALS,
+    B.OWN_GOALS,
     GOALS_CONCEDED,
     CLEAN_SHEETS,
     SAVES,
