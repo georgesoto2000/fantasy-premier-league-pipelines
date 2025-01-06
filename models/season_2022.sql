@@ -30,4 +30,4 @@ WITH season_2022 AS (
   LEFT JOIN {{ source('fpl_historic', '2023') }} D 
     ON D.NAME LIKE CONCAT("%", A.NAME, "%") OR A.NAME LIKE CONCAT("%", D.NAME, "%")
 )
-SELECT * FROM season_2022;
+SELECT * FROM season_2022
