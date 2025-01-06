@@ -11,12 +11,12 @@ WITH FBREF_SEASON_2016 AS(
     GOALS,
     ASSISTS,
     PENALTIES,
-    Penalty_Attempts,
+    Penalty_Attempts - Penalties AS PENALTIES_MISSED,
     YELLOW_CARDS,
     Red_Cards,
     xg,
     xA,
-    '2016' AS SEASON_START
+    2016 AS SEASON_START
   FROM {{ source('fbref_historic', '2016') }}),
 
 FBREF_SEASON_2017 AS(
@@ -32,12 +32,12 @@ FBREF_SEASON_2017 AS(
     GOALS,
     ASSISTS,
     PENALTIES,
-    Penalty_Attempts,
+    Penalty_Attempts - Penalties AS PENALTIES_MISSED,
     YELLOW_CARDS,
     Red_Cards,
     xg,
     xA,
-    '2017' AS SEASON_START
+    2017 AS SEASON_START
   FROM {{ source('fbref_historic', '2017') }}),
 
 FBREF_SEASON_2018 AS(
@@ -53,12 +53,12 @@ FBREF_SEASON_2018 AS(
     GOALS,
     ASSISTS,
     PENALTIES,
-    Penalty_Attempts,
+    Penalty_Attempts - Penalties AS PENALTIES_MISSED,
     YELLOW_CARDS,
     Red_Cards,
     xg,
     xA,
-    '2018' AS SEASON_START
+    2018 AS SEASON_START
   FROM {{ source('fbref_historic', '2018') }}),
 
 FBREF_SEASON_2019 AS(
@@ -74,12 +74,12 @@ FBREF_SEASON_2019 AS(
     GOALS,
     ASSISTS,
     PENALTIES,
-    Penalty_Attempts,
+    Penalty_Attempts - Penalties AS PENALTIES_MISSED,
     YELLOW_CARDS,
     Red_Cards,
     xg,
     xA,
-    '2019' AS SEASON_START
+    2019 AS SEASON_START
   FROM {{ source('fbref_historic', '2019') }}),
 
 FBREF_SEASON_2020 AS(
@@ -95,12 +95,12 @@ FBREF_SEASON_2020 AS(
     GOALS,
     ASSISTS,
     PENALTIES,
-    Penalty_Attempts,
+    Penalty_Attempts - Penalties AS PENALTIES_MISSED,
     YELLOW_CARDS,
     Red_Cards,
     xg,
     xA,
-    '2020' AS SEASON_START
+    2020 AS SEASON_START
   FROM {{ source('fbref_historic', '2020') }}),
 
 FBREF_SEASON_2021 AS(
@@ -116,12 +116,12 @@ FBREF_SEASON_2021 AS(
     GOALS,
     ASSISTS,
     PENALTIES,
-    Penalty_Attempts,
+    Penalty_Attempts - Penalties AS PENALTIES_MISSED,
     YELLOW_CARDS,
     Red_Cards,
     xg,
     xA,
-    '2021' AS SEASON_START
+    2021 AS SEASON_START
   FROM {{ source('fbref_historic', '2021') }}),
 
 FBREF_SEASON_2022 AS(
@@ -137,12 +137,12 @@ FBREF_SEASON_2022 AS(
     GOALS,
     ASSISTS,
     PENALTIES,
-    Penalty_Attempts,
+    Penalty_Attempts - Penalties AS PENALTIES_MISSED,
     YELLOW_CARDS,
     Red_Cards,
     xg,
     xA,
-    '2022' AS SEASON_START
+    2022 AS SEASON_START
   FROM {{ source('fbref_historic', '2022') }}),
 
 FBREF_SEASON_2023 AS(
@@ -158,12 +158,12 @@ FBREF_SEASON_2023 AS(
     GOALS,
     ASSISTS,
     PENALTIES,
-    Penalty_Attempts,
+    Penalty_Attempts - Penalties AS PENALTIES_MISSED,
     YELLOW_CARDS,
     Red_Cards,
     xg,
     xA,
-    '2023' AS SEASON_START
+    2023 AS SEASON_START
   FROM {{ source('fbref_historic', '2023') }})
 
 SELECT * FROM FBREF_SEASON_2016
