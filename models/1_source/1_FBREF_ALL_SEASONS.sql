@@ -14,8 +14,8 @@ WITH FBREF_SEASON_2016 AS(
     CAST(Penalty_Attempts AS INT64) - CAST(Penalties AS INT64) AS PENALTIES_MISSED,
     CAST(YELLOW_CARDS AS INT64),
     CAST(Red_Cards AS INT64),
-    CAST(xg AS FLOAT),
-    CAST(xA AS FLOAT),
+    CAST(xg AS float64),
+    CAST(xA AS float64),
     2016 AS SEASON_START
   FROM {{ source('fbref_historic', '2016') }}),
 
@@ -35,8 +35,8 @@ FBREF_SEASON_2017 AS(
     CAST(Penalty_Attempts AS INT64) - CAST(Penalties AS INT64) AS PENALTIES_MISSED,
     CAST(YELLOW_CARDS AS INT64),
     CAST(Red_Cards AS INT64),
-    CAST(xg AS FLOAT),
-    CAST(xA AS FLOAT),
+    CAST(xg AS float64),
+    CAST(xA AS float64),
     2017 AS SEASON_START
   FROM {{ source('fbref_historic', '2017') }}),
 
@@ -56,8 +56,8 @@ FBREF_SEASON_2018 AS(
     CAST(Penalty_Attempts AS INT64) - CAST(Penalties AS INT64) AS PENALTIES_MISSED,
     CAST(YELLOW_CARDS AS INT64),
     CAST(Red_Cards AS INT64),
-    CAST(xg AS FLOAT),
-    CAST(xA AS FLOAT),
+    CAST(xg AS float64),
+    CAST(xA AS float64),
     2018 AS SEASON_START
   FROM {{ source('fbref_historic', '2018') }}),
 
@@ -77,8 +77,8 @@ FBREF_SEASON_2019 AS(
     CAST(Penalty_Attempts AS INT64) - CAST(Penalties AS INT64) AS PENALTIES_MISSED,
     CAST(YELLOW_CARDS AS INT64),
     CAST(Red_Cards AS INT64),
-    CAST(xg AS FLOAT),
-    CAST(xA AS FLOAT),
+    CAST(xg AS float64),
+    CAST(xA AS float64),
     2019 AS SEASON_START
   FROM {{ source('fbref_historic', '2019') }}),
 
@@ -98,8 +98,8 @@ FBREF_SEASON_2020 AS(
     CAST(Penalty_Attempts AS INT64) - CAST(Penalties AS INT64) AS PENALTIES_MISSED,
     CAST(YELLOW_CARDS AS INT64),
     CAST(Red_Cards AS INT64),
-    CAST(xg AS FLOAT),
-    CAST(xA AS FLOAT),
+    CAST(xg AS float64),
+    CAST(xA AS float64),
     2020 AS SEASON_START
   FROM {{ source('fbref_historic', '2020') }}),
 
@@ -119,8 +119,8 @@ FBREF_SEASON_2021 AS(
     CAST(Penalty_Attempts AS INT64) - CAST(Penalties AS INT64) AS PENALTIES_MISSED,
     CAST(YELLOW_CARDS AS INT64),
     CAST(Red_Cards AS INT64),
-    CAST(xg AS FLOAT),
-    CAST(xA AS FLOAT),
+    CAST(xg AS float64),
+    CAST(xA AS float64),
     2021 AS SEASON_START
   FROM {{ source('fbref_historic', '2021') }}),
 
@@ -140,8 +140,8 @@ FBREF_SEASON_2022 AS(
     CAST(Penalty_Attempts AS INT64) - CAST(Penalties AS INT64) AS PENALTIES_MISSED,
     CAST(YELLOW_CARDS AS INT64),
     CAST(Red_Cards AS INT64),
-    CAST(xg AS FLOAT),
-    CAST(xA AS FLOAT),
+    CAST(xg AS float64),
+    CAST(xA AS float64),
     2022 AS SEASON_START
   FROM {{ source('fbref_historic', '2022') }}),
 
@@ -161,8 +161,8 @@ FBREF_SEASON_2023 AS(
     CAST(Penalty_Attempts AS INT64) - CAST(Penalties AS INT64) AS PENALTIES_MISSED,
     CAST(YELLOW_CARDS AS INT64),
     CAST(Red_Cards AS INT64),
-    CAST(xg AS FLOAT),
-    CAST(xA AS FLOAT),
+    CAST(xg AS float64),
+    CAST(xA AS float64),
     2023 AS SEASON_START
   FROM {{ source('fbref_historic', '2023') }})
 
