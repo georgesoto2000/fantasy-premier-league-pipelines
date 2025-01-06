@@ -1,7 +1,7 @@
 SELECT 
     A.NAME,
-    TEAM,
     AGE,
+    B.RK AS TEAM_RANK,
     POSITION,
     MATCHES_PLAYED,
     STARTS,
@@ -19,8 +19,8 @@ SELECT
     CLEAN_SHEETS,
     SAVES,
     POINTS,
-FROM {{ ref('FBREF_ALL_SEASONS') }} A 
-LEFT JOIN (SELECT * FROM {{ ref('FPL_ALL_SEASONS') }}) B
-    ON (B.NAME LIKE CONCAT("%", A.NAME, "%") 
-        OR A.NAME LIKE CONCAT("%", B.NAME, "%")) 
-        AND A.SEASON_START = B.SEASON_START
+    NEXT_SEASON_POINTS
+FROM {{ ref('3_FBREF_FPL_NEXT_SEASON_POINTS') }} A
+LEFT JOIN (SELECT * FROM {{ source('static_tables', 'historic_pl_tables') }}) B
+    ON (A.SEASON_START + 1) = B.SEASON_END_YEAR
+        AND A.TEAM = B.TEAM
