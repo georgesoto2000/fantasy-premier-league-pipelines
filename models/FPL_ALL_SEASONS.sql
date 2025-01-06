@@ -72,9 +72,6 @@ FPL_SEASON_2022 AS(
 FPL_SEASON_2023 AS(
   SELECT
     NAME,
-    Nationality,
-    POSITION,
-    NAME,
     Clean_Sheets,
     Goals_Conceded,
     Own_Goals,
