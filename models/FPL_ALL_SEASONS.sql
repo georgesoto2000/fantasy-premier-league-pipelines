@@ -55,6 +55,7 @@ FPL_SEASON_2021 AS(
     SAVES,
     COST,
     Points,
+    '2021' AS SEASON_START
   FROM {{ source('fpl_historic', '2021') }}),
 
 FPL_SEASON_2022 AS(
