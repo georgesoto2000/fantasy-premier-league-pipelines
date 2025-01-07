@@ -19,9 +19,10 @@ SELECT
     CLEAN_SHEETS,
     SAVES,
     A.SEASON_START,
+    NEXT_SEASON_START,
     POINTS,
     NEXT_SEASON_POINTS
 FROM {{ ref('3_FBREF_FPL_NEXT_SEASON_POINTS') }} A
-LEFT JOIN (SELECT * FROM {{ source('static_tables', 'historic_pl_tables') }}) B
-    ON (A.SEASON_START + 1) = B.SEASON_END_YEAR
-        AND A.TEAM = B.TEAM
+INNER JOIN (SELECT * FROM {{ source('static_tables', 'historic_pl_tables') }}) B
+    ON A.TEAM = B.TEAM
+WHERE (A.SEASON_START + 1) = B.SEASON_END_YEAR 
