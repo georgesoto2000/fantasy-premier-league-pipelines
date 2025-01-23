@@ -29,7 +29,7 @@ WITH FE_SEASONS AS (
     SAVES,
     POINTS,
   FROM {{ ref('4_fe') }} 
-  WHERE SEASON_START = (SELECT MAX(SEASON_START) FROM {{ ref('6_fe') }})
+  WHERE SEASON_START = (SELECT MAX(SEASON_START) FROM {{ ref('4_fe') }})
 )
 
 SELECT *
