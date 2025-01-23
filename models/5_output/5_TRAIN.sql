@@ -29,7 +29,7 @@ WITH FE_SEASONS AS (
     SAVES,
     POINTS,
     NEXT_SEASON_POINTS
-  FROM {{ ref('6_fe') }} 
+  FROM {{ ref('4_FACTOR_ENGINEERING') }} 
 )
 
 SELECT *
