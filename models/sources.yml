@@ -22,7 +22,7 @@ sources:
       - name: '2021'
       - name: '2022'
       - name: '2023'
-  - name: live2
+  - name: live
     tables:
       - name: prices
   
