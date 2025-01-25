@@ -25,7 +25,7 @@ sources:
   - name: live
     tables:
       - name: prices
-  
+      
   - name: static_tables
     tables:
       - name: historic_pl_tables

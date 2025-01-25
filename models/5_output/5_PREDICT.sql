@@ -30,7 +30,7 @@ WITH FE_SEASONS AS (
     COST,
     POINTS,
   FROM {{ ref('4_FACTOR_ENGINEERING') }} A
-  INNER JOIN {{ source('live2', 'prices') }} B ON A.NAME = B.NAME
+  INNER JOIN {{ source('live', 'prices') }} B ON A.NAME = B.NAME
   WHERE SEASON_START = (SELECT MAX(SEASON_START) FROM {{ ref('4_FACTOR_ENGINEERING') }})
 )
 
